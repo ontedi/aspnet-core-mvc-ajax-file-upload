@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ac7MvShZXhJ+yCbLmc/YDHOq5i/wubxqKCZno4ugDmR4AskecYOb2U4BZWldYw8jn2P0uMpqJACfURoDnvajOw==",
+  "dgSpecHash": "Y+X9n71yRiMs5anWhN/2nGh9/W2ebewsSexswKhrUyYWm0+hYWLbTh4JTP6dXFqy9YPg4RlQFpRtWcet7Yrnrg==",
   "success": true,
-  "projectFilePath": "C:\\calismalar\\netcore\\aspnet-core-mvc-ajax-file-upload\\aspnet-core-mvc-ajax-file-upload.csproj",
+  "projectFilePath": "D:\\calisma-masasi\\projeler-dotnetcore\\aspnet-core-mvc-ajax-file-upload\\aspnet-core-mvc-ajax-file-upload.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

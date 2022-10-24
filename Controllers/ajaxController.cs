@@ -40,7 +40,7 @@ namespace aspnet_core_mvc_ajax_file_upload.Controllers
         }
         [Route("ajax/dosya-yukle")]
         [HttpPost]
-        public string dosya_yukle(string strDosya_Adi_Ek, IFormFile fuDosya)
+        public string dosya_yukle(string strDosya_Adi, IFormFile fuDosya)
         {
             string strKlasor = "wwwroot/dosyalar/";
             string strKlasor_Relative = "/wwwroot/dosyalar/";
@@ -94,10 +94,14 @@ namespace aspnet_core_mvc_ajax_file_upload.Controllers
                     Directory.CreateDirectory(strDosya_Patika);
                 }
 
-                string strDosya_Adi = Path.GetFileNameWithoutExtension(fuDosya.FileName);
+                if (string.IsNullOrEmpty(strDosya_Adi))
+                {
+                    strDosya_Adi = Path.GetFileNameWithoutExtension(fuDosya.FileName);
+                }
+
                 string strDosya_Uzantisi = Path.GetExtension(fuDosya.FileName);
                 string strSayi = fnSayi_Uret();
-                strDosya_Adi = strDosya_Adi + "-" + strDosya_Adi_Ek + "-" + strSayi + strDosya_Uzantisi;
+                strDosya_Adi = strDosya_Adi + "-" + strSayi + strDosya_Uzantisi;
 
                 using (FileStream fsDosya_Akis = new FileStream(Path.Combine(strDosya_Patika, strDosya_Adi), FileMode.Create))
                 {

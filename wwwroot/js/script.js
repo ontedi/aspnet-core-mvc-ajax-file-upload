@@ -4,11 +4,11 @@
 fnAjax_Dosya_Yukle_Tetikleyici();
 function fnAjax_Dosya_Yukle_Tetikleyici() {
     jQuery("body").on("change", ".jq-dosya-yukle-form-input-file", function () {
-        var strDosya_Adi_Ek = jQuery(".jq-dosya-yukle-form-input-dosya-adi-ek").val();
+        var strDosya_Adi = jQuery(".jq-dosya-yukle-form-input-dosya-adi").val();
         var strDosya = jQuery(".jq-dosya-yukle-form-input-file")[0].files[0];
 
         var fdVeriler = new FormData();
-        fdVeriler.append("strDosya_Adi_Ek", strDosya_Adi_Ek);
+        fdVeriler.append("strDosya_Adi", strDosya_Adi);
         fdVeriler.append("fuDosya", strDosya);
 
         jQuery.ajax
