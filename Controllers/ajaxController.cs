@@ -108,18 +108,19 @@ namespace aspnet_core_mvc_ajax_file_upload.Controllers
                     fuDosya.CopyTo(fsDosya_Akis);
                 }
 
-                string strHTML = string.Empty;
-
                 string strDosya_Adresi_Relative = strKlasor_Relative + strDosya_Adi;
 
-                strHTML += "<div class='dosya-kapsul'>";
+                strSonuc += "<div class='dosya-kapsul'>";
                 if (blnResim)
-                    strHTML += "<img class='resim' src='" + strDosya_Adresi_Relative + "' alt='" + strDosya_Adi + "' />";
+                {
+                    strSonuc += "<img class='resim' src='" + strDosya_Adresi_Relative + "' alt='" + strDosya_Adi + "' />";
+                }  
                 else
-                    strHTML += "<a href='" + strDosya_Adresi_Relative + "' target='_blank'>" + strDosya_Adi + "</a>";
-                strHTML += "</div>";
-
-                strSonuc = strHTML;
+                {
+                    strSonuc += "<a href='" + strDosya_Adresi_Relative + "' target='_blank'>" + strDosya_Adi + "</a>";
+                }
+                    
+                strSonuc += "</div>";
             }
 
             return strSonuc;

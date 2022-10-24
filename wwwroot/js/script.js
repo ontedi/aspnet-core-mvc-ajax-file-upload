@@ -4,6 +4,9 @@
 fnAjax_Dosya_Yukle_Tetikleyici();
 function fnAjax_Dosya_Yukle_Tetikleyici() {
     jQuery("body").on("change", ".jq-dosya-yukle-form-input-file", function () {
+
+        jQuery(".jq-dosya-yukle-form-hedef-div").html("Yükleniyor..");
+
         var strDosya_Adi = jQuery(".jq-dosya-yukle-form-input-dosya-adi").val();
         var strDosya = jQuery(".jq-dosya-yukle-form-input-file")[0].files[0];
 
