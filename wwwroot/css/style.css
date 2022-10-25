@@ -1,5 +1,6 @@
 ﻿*{margin:0;padding:0;font-family:inherit;}
-body{font-family:'Arial',sans-serif;background-color:#f5f5f5;font-size:12px;line-height:20px;}
+body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background-color:#f5f5f5;font-size:12px;line-height:20px;}
+h1{font-size:18px;margin-bottom:10px;text-align:center;}
 .kapsul{width:600px;position:relative;background:#fff;margin:10px auto;padding:10px;}
 .satir{margin-bottom:10px;}
 .input-kapsul{font-size:13px;height:auto;outline:none;box-shadow:inset 1px 2px 0 rgba(0, 0, 0, 0.06);border:1px solid #D9D9D9;background-color:#fff;padding:0px 10px;}
@@ -10,3 +11,6 @@ body{font-family:'Arial',sans-serif;background-color:#f5f5f5;font-size:12px;line
 .dosya-kapsul:hover{border-color:#bbb;}
 .dosya-kapsul .dosya-adi{display:block;margin-bottom:5px;}
 .dosya-kapsul img{max-width:100%;display:block;margin:5px auto;}
+
+.telif{margin-top:10px;text-align:right;}
+.telif a{color:#345370;}
