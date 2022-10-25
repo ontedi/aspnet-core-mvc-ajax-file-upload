@@ -113,7 +113,7 @@ namespace aspnet_core_mvc_ajax_file_upload.Controllers
                 strSonuc += "<div class='dosya-kapsul'>";
                 if (blnResim)
                 {
-                    strSonuc += "<img class='resim' src='" + strDosya_Adresi_Relative + "' alt='" + strDosya_Adi + "' />";
+                    strSonuc += "<span class='dosya-adi'>" + strDosya_Adi + "</span><img class='resim' src='" + strDosya_Adresi_Relative + "' alt='" + strDosya_Adi + "' />";
                 }  
                 else
                 {

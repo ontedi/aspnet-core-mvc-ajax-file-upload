@@ -1,8 +1,9 @@
-﻿var objDosyaYukleFormInputFile = document.getElementById('js-form-dosya-yukle');
-objDosyaYukleFormInputFile.addEventListener("change", function () {
+﻿var objInputDosya = document.getElementsByClassName('js-input-dosya')[0];
+objInputDosya.addEventListener("change", function () {
+    let strDosya = objInputDosya.files[0];
     let strDosya_Adi = document.getElementsByClassName("js-input-dosya-adi")[0].value;
-    let strDosya = document.getElementsByClassName("js-input-dosya")[0].files[0];
     let objDosya_Yukle_Hedef = document.getElementsByClassName("js-dosya-yukle-hedef")[0];
+    objDosya_Yukle_Hedef.innerHTML = "Yükleniyor..";
     let fdVeriler = new FormData();
     fdVeriler.append("strDosya_Adi", strDosya_Adi);
     fdVeriler.append("fuDosya", strDosya);
