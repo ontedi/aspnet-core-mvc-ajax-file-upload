@@ -6,3 +6,4 @@
 string strSonuc = DateTime.Now.ToString("yyyyMMdd hh:mm:ss");
 strSonuc = strSonuc.Replace(" ", "-");
 strSonuc = strSonuc.Replace(":", string.Empty);
+
