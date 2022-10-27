@@ -21,7 +21,7 @@ namespace aspnet_core_mvc_ajax_file_upload.Controllers
         }
         public string fnSayi_Uret()
         {
-            string strSonuc = DateTime.Now.ToString("yyyyMMdd-hhmmss");
+            string strSonuc = DateTime.Now.ToString("yyyyMMdd hh:mm:ss").Replace(" ", "-").Replace(":", string.Empty);
             return strSonuc;
         }
         [Route("ajax/dosya-yukle")]
