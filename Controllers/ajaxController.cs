@@ -21,7 +21,7 @@ namespace aspnet_core_mvc_ajax_file_upload.Controllers
         }
         public string fnSayi_Uret()
         {
-            string strSonuc = DateTime.Now.ToString("yyyyMMdd hh:mm:ss").Replace(" ", "-").Replace(":", string.Empty);
+            string strSonuc = DateTime.Now.ToString("yyyyMMdd-hhmmss");
             return strSonuc;
         }
         [Route("ajax/dosya-yukle")]
@@ -101,17 +101,17 @@ namespace aspnet_core_mvc_ajax_file_upload.Controllers
 
                 string strDosya_Adresi_Relative = strKlasor_Relative + strDosya_Adi;
 
-                strSonuc += "<div class='dosya-kapsul'>";
+                strSonuc = $"<div class='dosya-kapsul'>";
                 if (blnResim)
                 {
-                    strSonuc += "<span class='dosya-adi'>" + strDosya_Adi + "</span><img class='resim' src='" + strDosya_Adresi_Relative + "' alt='" + strDosya_Adi + "' />";
+                    strSonuc += $"<span class='dosya-adi'>{strDosya_Adi}</span><img class='resim' src='{strDosya_Adresi_Relative}' alt='{strDosya_Adi}' />";
                 }  
                 else
                 {
-                    strSonuc += "<a href='" + strDosya_Adresi_Relative + "' target='_blank'>" + strDosya_Adi + "</a>";
+                    strSonuc += $"<a href='{strDosya_Adresi_Relative}' target='_blank'>{strDosya_Adi}</a>";
                 }
                     
-                strSonuc += "</div>";
+                strSonuc += $"</div>";
             }
 
             return strSonuc;
