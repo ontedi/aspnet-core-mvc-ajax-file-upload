@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace aspnet_core_mvc_ajax_file_upload.Controllers
 {
@@ -20,22 +21,7 @@ namespace aspnet_core_mvc_ajax_file_upload.Controllers
         }
         public string fnSayi_Uret()
         {
-            string strSonuc = string.Empty;
-            int intSalise = DateTime.Now.Millisecond;
-            string strSalise = intSalise.ToString();
-            int intSaniye = DateTime.Now.Second;
-            string strSaniye = intSaniye.ToString();
-            int intDakika = DateTime.Now.Minute;
-            string strDakika = intDakika.ToString();
-            int intSaat = DateTime.Now.Hour;
-            string strSaat = intSaat.ToString();
-            int intGun = DateTime.Now.Day;
-            string strGun = intGun.ToString();
-            int intAy = DateTime.Now.Month;
-            string strAy = intAy.ToString();
-            int intYil = DateTime.Now.Year;
-            string strYil = intYil.ToString();
-            strSonuc = strYil + strAy + strGun + strSaat + strDakika + strSaniye;
+            string strSonuc = DateTime.Now.ToString("yyyyMMdd hh:mm:ss").Replace(" ", "-").Replace(":", string.Empty);
             return strSonuc;
         }
         [Route("ajax/dosya-yukle")]
