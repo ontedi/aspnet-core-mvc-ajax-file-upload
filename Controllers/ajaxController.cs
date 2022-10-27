@@ -34,40 +34,45 @@ namespace aspnet_core_mvc_ajax_file_upload.Controllers
             bool blnDosya_Yukle = false;
             bool blnResim = false;
             string strDosya_Tipi = fuDosya.ContentType;
-            if (strDosya_Tipi == "application/vnd.ms-word")
-                blnDosya_Yukle = true;
-            else if (strDosya_Tipi == "application/pdf")
-                blnDosya_Yukle = true;
-            else if (strDosya_Tipi == "application/octet-stream")
-                blnDosya_Yukle = true;
-            else if (strDosya_Tipi == "application/vnd.ms-excel")
-                blnDosya_Yukle = true;
-            else if (strDosya_Tipi == "application/vnd.openxmlformats-officedocument.presentationml.presentation")
-                blnDosya_Yukle = true;
-            else if (strDosya_Tipi == "image/jpg")
+
+            switch(strDosya_Tipi) 
             {
+            case "application/vnd.ms-word":
+                blnDosya_Yukle = true;
+                break;
+            case "application/pdf":
+                blnDosya_Yukle = true;
+                break;
+            case "application/octet-stream":
+                blnDosya_Yukle = true;
+                break;
+            case "application/vnd.ms-excel":
+                blnDosya_Yukle = true;
+                break;
+            case "application/vnd.openxmlformats-officedocument.presentationml.presentation":
+                blnDosya_Yukle = true;
+                break;
+            case "image/jpg":
                 blnDosya_Yukle = true;
                 blnResim = true;
-            }
-            else if (strDosya_Tipi == "image/jpeg")
-            {
+                break;
+            case "image/jpeg":
                 blnDosya_Yukle = true;
                 blnResim = true;
-            }
-            else if (strDosya_Tipi == "image/png")
-            {
+                break;
+            case "image/png":
                 blnDosya_Yukle = true;
                 blnResim = true;
-            }
-            else if (strDosya_Tipi == "image/gif")
-            {
+                break;
+            case "image/gif":
                 blnDosya_Yukle = true;
                 blnResim = true;
-            }
-            else if (strDosya_Tipi == "video/mp4")
-            {
+                break;
+            case "video/mp4":
                 blnDosya_Yukle = true;
-                blnResim = false;
+                break;
+            default:
+                break;
             }
 
             if (blnDosya_Yukle)
